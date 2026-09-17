@@ -2,8 +2,8 @@ FROM debian:trixie-slim
 
 ENV DEBIAN_FRONTEND=noninteractive \
     PORT=8080 \
-    USERNAME=admin \
-    PASSWORD=admin
+    USERNAME=root \
+    PASSWORD=root
 
 RUN apt-get update && \
     apt-get upgrade -y && \
