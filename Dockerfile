@@ -22,4 +22,4 @@ RUN echo "fastfetch" >> /root/.bashrc && \
 
 EXPOSE 8080
 
-CMD ["/bin/bash", "-c", "USER_VAL=${USERNAME:-admin}; PASS_VAL=${PASSWORD:-admin}; PORT_VAL=${PORT:-8080}; echo \"export PS1='\\[\\033[01;31m\\]$USER_VAL@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\$ '\" >> /root/.bashrc && /bin/ttyd -p $PORT_VAL -c $USER_VAL:$PASS_VAL /bin/bash"]
+CMD ["/bin/bash", "-c", "USER_VAL=${USERNAME:-root}; PASS_VAL=${PASSWORD:-root}; PORT_VAL=${PORT:-8080}; echo \"export PS1='\\[\\033[01;31m\\]$USER_VAL@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\$ '\" >> /root/.bashrc && /bin/ttyd -p $PORT_VAL -c $USER_VAL:$PASS_VAL /bin/bash"]
